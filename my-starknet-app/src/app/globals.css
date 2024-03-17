@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 0, 43, 92; /* Dark blue color */
+  --background-end-rgb: 0, 43, 92; /* Dark blue color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 27, 27, 27;
+    --background-end-rgb: 27, 27, 27;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
